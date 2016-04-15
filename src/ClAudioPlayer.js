@@ -7,7 +7,8 @@ var CLAudioPlayer = React.createClass({
 
   propTypes: {
     songs: React.PropTypes.array.isRequired,
-    autoplay: React.PropTypes.bool
+    autoplay: React.PropTypes.bool,
+    playlist: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -30,7 +31,9 @@ var CLAudioPlayer = React.createClass({
     self.audio.autoplay = !!this.props.autoplay;
 
     this.audio.addEventListener('timeupdate', self.updateProgress);
-    this.audio.addEventListener('ended', self.next);
+    if (!!this.props.playlist) {
+    	this.audio.addEventListener('ended', self.next);
+    }
     this.audio.addEventListener('error', self.next);
   },
 
