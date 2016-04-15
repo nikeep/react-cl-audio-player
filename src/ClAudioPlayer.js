@@ -31,9 +31,8 @@ var CLAudioPlayer = React.createClass({
     self.audio.autoplay = !!this.props.autoplay;
 
     this.audio.addEventListener('timeupdate', self.updateProgress);
-    if (!!this.props.playlist) {
-    	this.audio.addEventListener('ended', self.next);
-    }
+    
+    this.audio.addEventListener('ended', self.next);
     this.audio.addEventListener('error', self.next);
   },
 
@@ -86,6 +85,9 @@ var CLAudioPlayer = React.createClass({
   },
 
   next() {
+    if (!!this.props.playlist) {
+    	this.audio.stop();
+    }
     var total = this.state.songs.length;
     var current = (this.state.repeat) ? this.state.current : (this.state.current < total - 1) ? this.state.current + 1 : 0;
     var active = this.state.songs[current];
