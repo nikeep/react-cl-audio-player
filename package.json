@@ -4,13 +4,13 @@
   "description": "CLAudioPlayer",
   "main": "lib/ClAudioPlayer.js",
   "author": "Cezar Luiz",
-  "homepage": "https://github.com/CezarLuiz0/react-cl-audio-player",
+  "homepage": "https://github.com/nikeep/react-cl-audio-player",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CezarLuiz0/react-cl-audio-player.git"
+    "url": "https://github.com/nikeep/react-cl-audio-player.git"
   },
   "bugs": {
-    "url": "https://github.com/CezarLuiz0/react-cl-audio-player/issues"
+    "url": "https://github.com/nikeep/react-cl-audio-player/issues"
   },
   "dependencies": {
     "classnames": "^2.2.0",
